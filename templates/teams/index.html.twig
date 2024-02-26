@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teams{% endblock %}
+
+{% block body %}
+{# templates/team/index.html.twig #}
+    <h1>Équipes</h1>
+    {# {% <? php $query = $mysqli->query("SELECT * FROM team"); >%}  #}
+    <ul>
+    
+        {% for team in teams %}
+            <li><a href="{{ path('team_show', {'id': team.id}) }}">{{ team.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+{% endblock %}
